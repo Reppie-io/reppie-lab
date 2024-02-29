@@ -1,1 +1,1 @@
-# ecommerce-search
+# ecommerce-ai-search
