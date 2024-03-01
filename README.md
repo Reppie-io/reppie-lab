@@ -42,13 +42,13 @@ To generate data in Pinecone, you can use the provided ingest.py script located 
 To generate the data, follow these steps:
 
 1. Navigate to the vectorstore.data.open_fashion directory.
-2. Run the ingest.py script by executing python ingest.py in your terminal.
+2. Run the ingest.py script by executing `python vectorstore/data/open_fashion/ingest.py` in your terminal.
 
 The script will download the dataset and insert it into the Pinecone vector store.
 
 ## References
 
-[Pinecone Documentation](https://docs.pinecone.io/docs/overview)
+[Pinecone Documentation](https://docs.pinecone.io/docs/overview) <br>
 [OpenAI CLIP Documentation](https://openai.com/research/clip)
 
 ## Contributing
