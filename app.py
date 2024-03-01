@@ -48,7 +48,6 @@ with st.container():
         "Ou pesquise por imagens usando busca semântica:",
         disabled=uploaded_file is not None,
         value="",
-        key=1
     )
 
     if query and not uploaded_file:

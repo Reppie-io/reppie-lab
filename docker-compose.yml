@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  web:
+    container_name: web-api
+    build: .
+    ports:
+      - 8501:8501
+    environment:
+      - PINECONE_API_KEY=$PINECONE_API_KEY
