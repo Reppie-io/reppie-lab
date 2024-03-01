@@ -1,34 +1,34 @@
-import os
-from PIL import Image
 import streamlit as st
 
+from PIL import Image
+from PIL.Image import Image as ImageFile
+from typing import List
 from utils import base64_to_pil
-from vectorstore.pinecone import PineconeVectorStore
+from vectorstore.pinecone import PineconeIndex
 
 DEFAULT_QUERY = "roupas elegantes para homens"
-
 PINECONE_INDEX_NAME = "cosine-image-search"
-pinecone = PineconeVectorStore(
-    api_key=os.getenv("PINECONE_API_KEY"), index_name=PINECONE_INDEX_NAME
-)
 
 if "images" not in st.session_state:
     st.session_state["images"] = []
 
 
 @st.spinner(text="Pesquisando imagens...")
-def search(query):
-    results = pinecone.query(query)
+def search(query: ImageFile | str, index_name: str = PINECONE_INDEX_NAME) -> List:
+    vectorstore = PineconeIndex(index_name)
+    return vectorstore.semantic_search(query)
 
-    parsed_results = []
+
+def update_results(results: List) -> None:
+    results_images = []
 
     for result in results:
         image_b64 = result["metadata"]["image_b64"]
         image_score = result["score"]
 
-        parsed_results.append({"image_b64": image_b64, "score": image_score})
+        results_images.append({"image_b64": image_b64, "score": image_score})
 
-    st.session_state.images = parsed_results
+    st.session_state.images = results_images
 
 
 with st.container():
@@ -42,7 +42,8 @@ with st.container():
 
     if uploaded_file:
         image = Image.open(uploaded_file)
-        search(image)
+        results = search(image)
+        update_results(results)
 
     query = st.text_input(
         "Ou pesquise por imagens usando busca semântica:",
@@ -51,7 +52,8 @@ with st.container():
     )
 
     if query and not uploaded_file:
-        search(query)
+        results = search(query)
+        update_results(results)
 
     col_count = 4
     image_count = len(st.session_state.images)
