@@ -11,7 +11,7 @@ Semantic image search allows users to find images based on their content rather 
 To use this application, you need to have the following:
 
 - Docker
-- Pinecone API key (obtainable from Pinecone's website)
+- Pinecone API key (obtainable from Pinecone's [documentation](https://docs.pinecone.io/v1/docs/quickstart#2-get-your-api-key))
 
 ## Setting up secrets.toml
 
