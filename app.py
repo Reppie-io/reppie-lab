@@ -3,7 +3,7 @@ from PIL import Image
 import streamlit as st
 
 from utils import base64_to_pil
-from vectorstores.pinecone import PineconeVectorStore
+from vectorstore.pinecone import PineconeVectorStore
 
 DEFAULT_QUERY = "roupas elegantes para homens"
 
