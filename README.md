@@ -38,7 +38,7 @@ To use the semantic image search application:
 
 ## Generating Data in Pinecone
 
-To generate data in Pinecone, you can use the provided ingest.py script located inside the vectorstore.data.open_fashion folder. This script downloads the [Open Fashion](https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small) dataset and inserts it into the vector store.
+To generate data in Pinecone, you can use the provided `ingest.py` script located inside the `vectorstore.data.open_fashion` folder. This script downloads the [Open Fashion](https://www.kaggle.com/datasets/paramaggarwal/fashion-product-images-small) dataset and inserts it into the vector store.
 
 To generate the data, follow these steps:
 
