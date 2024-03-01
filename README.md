@@ -33,6 +33,7 @@ To use the semantic image search application:
 
 1. Clone this repository.
 2. Set up your secrets.toml file as described above.
+3. Edit the `PINECONE_INDEX_NAME` constant in `app.py` with the name of your Pinecone index.
 3. Build docker image and run: `docker-compose up --build`
 
 ## Generating Data in Pinecone
@@ -42,6 +43,7 @@ To generate data in Pinecone, you can use the provided ingest.py script located 
 To generate the data, follow these steps:
 
 1. Navigate to the vectorstore.data.open_fashion directory.
+2. Edit the `PINECONE_INDEX_NAME` constant in `ingest.py` with the name of your Pinecone index.
 2. Run the ingest.py script by executing `python vectorstore/data/open_fashion/ingest.py` in your terminal.
 
 The script will download the dataset and insert it into the Pinecone vector store.

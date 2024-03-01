@@ -15,16 +15,20 @@ from embedding.CLIP.sentence_transformer import CLIPSentenceTransformer  # noqa:
 from vectorstore.data.open_fashion.dataset import OpenFashionDataset  # noqa: E402
 from vectorstore.pinecone import PineconeIndex  # noqa: E402
 
-NUM_PRODUCTS_TO_INGEST = 10
+
+PINECONE_INDEX_NAME = "cosine-image-search-2"
 
 # ingest full dataset
-# open_fashion_dataset = OpenFashionDataset().load_dataset()
+open_fashion_dataset = OpenFashionDataset().load_dataset()
 
+# NUM_PRODUCTS_TO_INGEST = 10
 # ingest only a subset of the dataset
-open_fashion_dataset = OpenFashionDataset().load_dataset().select(list(range(10)))
+# open_fashion_dataset = (
+#     OpenFashionDataset().load_dataset().select(list(range(NUM_PRODUCTS_TO_INGEST)))
+# )
 
 clip_model = CLIPSentenceTransformer()
-pinecone_index = PineconeIndex("cosine-image-search-2")
+pinecone_index = PineconeIndex(PINECONE_INDEX_NAME)
 
 images = open_fashion_dataset["image"]
 metadata = open_fashion_dataset.remove_columns("image").to_pandas()
