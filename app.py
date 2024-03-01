@@ -15,15 +15,6 @@ pinecone = PineconeVectorStore(
 if "images" not in st.session_state:
     st.session_state["images"] = []
 
-if "init_query" not in st.session_state:
-    st.session_state["init_query"] = False
-
-if "search_bar_value" not in st.session_state:
-    st.session_state["search_bar_value"] = DEFAULT_QUERY
-
-if "searching_by_image" not in st.session_state:
-    st.session_state["searching_by_image"] = False
-
 
 @st.spinner(text="Pesquisando imagens...")
 def search(query):
@@ -55,13 +46,12 @@ with st.container():
 
     query = st.text_input(
         "Ou pesquise por imagens usando busca semântica:",
-        placeholder=st.session_state.search_bar_value,
-        value="" if uploaded_file is not None else st.session_state.search_bar_value,
         disabled=uploaded_file is not None,
+        value="",
+        key=1
     )
 
-    if query:
-        st.session_state.search_bar_value = query
+    if query and not uploaded_file:
         search(query)
 
     col_count = 4
