@@ -1,0 +1,7 @@
+datasets 
+transformers 
+sentence-transformers 
+pinecone-client 
+pinecone-text 
+streamlit
+protobuf==3.20.3
