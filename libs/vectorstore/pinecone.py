@@ -3,16 +3,15 @@ import streamlit as st
 
 from pinecone import Pinecone
 from PIL.Image import Image as ImageFile
-from embedding.clip.encoder import CLIPEncoder
-from embedding.bm25.encoder import Bm25Encoder
+from libs.embedding.clip.encoder import CLIPEncoder
+from libs.embedding.bm25.encoder import Bm25Encoder
 
 
 class PineconeIndex:
-    def __init__(self, index_name: str, bm25_fit_corpus: List[str]):
-        self.index = Pinecone(api_key=st.secrets["PINECONE_API_KEY"]).Index(index_name)
-        self.dense_embedding = CLIPEncoder(
-            model_name="sentence-transformers/clip-ViT-B-32"
-        )
+    def __init__(self, api_key: str, index_name: str, bm25_fit_corpus: List[str]):
+        self.index = Pinecone(api_key=api_key).Index(index_name)
+
+        self.dense_embedding = CLIPEncoder()
         self.sparse_embedding = Bm25Encoder(fit_corpus=bm25_fit_corpus)
 
     def hybrid_scale(

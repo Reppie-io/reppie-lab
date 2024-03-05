@@ -2,10 +2,14 @@ version: '3.8'
 
 services:
   web:
-    container_name: web-api
+    container_name: reppie-lab-ecommerce
     build: .
     volumes:
       - .:/app
     ports:
       - 8501:8501
-    command: streamlit run app.py --server.port=8501 --server.address=0.0.0.0
+    command: streamlit run search/ecommerce/app.py --server.port=8501 --server.address=0.0.0.0
+    environment:
+      - PYTHONPATH=${PYTHONPATH}:/app/search/ecommerce
+      - PINECONE_API_KEY=ad32bc99-43d3-4b9d-bf00-af4ef34c9a33
+      - PINECONE_INDEX_NAME=reppie-lab-ecommerce

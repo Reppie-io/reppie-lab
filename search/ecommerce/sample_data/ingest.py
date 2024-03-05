@@ -1,6 +1,7 @@
 import base64
 import sys
 import os
+import io
 from tqdm.auto import tqdm
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -12,26 +13,28 @@ for _ in range(levels_up):
 
 sys.path.append(app_dir)
 
-from embedding.clip.encoder import CLIPEncoder  # noqa: E402
-from embedding.bm25.encoder import Bm25Encoder  # noqa: E402
-from vectorstore.data.open_fashion.dataset import OpenFashionDataset  # noqa: E402
-from vectorstore.pinecone import PineconeIndex  # noqa: E402
+from libs.embedding.clip.encoder import CLIPEncoder  # noqa: E402
+from libs.embedding.bm25.encoder import Bm25Encoder  # noqa: E402
+from search.ecommerce.sample_data.open_fashion_dataset import OpenFashionDataset  # noqa: E402
+from libs.vectorstore.pinecone import PineconeIndex  # noqa: E402
 
 
-PINECONE_INDEX_NAME = "hybrid-search-2"
+PINECONE_INDEX_NAME = "ecommerce-hybrid-image-search"
 
 # ingest full dataset
-# open_fashion_dataset = OpenFashionDataset().load_dataset()
+open_fashion_dataset = OpenFashionDataset().load_dataset()
 
-NUM_PRODUCTS_TO_INGEST = 10
 # ingest only a subset of the dataset
-open_fashion_dataset = (
-    OpenFashionDataset().load_dataset().select(list(range(NUM_PRODUCTS_TO_INGEST)))
-)
+# NUM_PRODUCTS_TO_INGEST = 10
+# open_fashion_dataset = (
+#     OpenFashionDataset().load_dataset().select(list(range(NUM_PRODUCTS_TO_INGEST)))
+# )
 
 clip_model = CLIPEncoder()
 bm25_model = Bm25Encoder(fit_corpus=open_fashion_dataset["productDisplayName"])
-pinecone_index = PineconeIndex(PINECONE_INDEX_NAME)
+pinecone_index = PineconeIndex(
+    PINECONE_INDEX_NAME, bm25_fit_corpus=open_fashion_dataset["productDisplayName"]
+)
 
 images = open_fashion_dataset["image"]
 metadata = open_fashion_dataset.remove_columns("image").to_pandas()
@@ -69,10 +72,16 @@ for i in tqdm(range(0, len(open_fashion_dataset), batch_size)):
 
     # loop through the data and create dictionaries for uploading to pinecone index
     for _id, value, sparse, meta in zip(ids, values, sparse_embeds, meta_dict):
-        meta["image_b64"] = base64.b64encode(images[int(_id)]).decode("utf-8")
-        
+        img_bytes = io.BytesIO()
+        image = images[int(_id)]
+
+        # Save the image to the in-memory stream in JPEG format
+        image.save(img_bytes, format="JPEG")
+
+        meta["image_b64"] = base64.b64encode(img_bytes.getvalue()).decode("utf-8")
+
         vectors.append(
-            {"id": _id, "values": value, "sparce_values": sparse, "metadata": meta}
+            {"id": _id, "values": value, "sparse_values": sparse, "metadata": meta}
         )
 
     # upload the documents to the new hybrid index
