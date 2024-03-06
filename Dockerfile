@@ -1,11 +1,7 @@
 FROM python:3.11-slim
 
-# RUN mkrdir /app
-
-WORKDIR /app
+WORKDIR /reppie-labs
 
 COPY . .
 
 RUN pip3 install -r requirements.txt
-
-EXPOSE 8501
