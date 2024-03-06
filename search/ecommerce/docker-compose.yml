@@ -12,4 +12,4 @@ services:
     environment:
       - PYTHONPATH=${PYTHONPATH}:/reppie-labs/search/ecommerce
       - PINECONE_API_KEY=<YOUR PINECONE_API_KEY>
-      - PINECONE_INDEX_NAME=ecommerce-hybrid-image-search
+      - PINECONE_INDEX_NAME=reppie-labs-ecommerce
