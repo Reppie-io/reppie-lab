@@ -46,7 +46,9 @@ def ingest_dataset_into_vectorstore(
         # create unique IDs
         ids = [str(x) for x in range(i, i_end)]
 
-        vectorstore_index.upsert_images(ids=ids, images=img_batch, meta_list=meta_batch, meta_dict=meta_dict)
+        vectorstore_index.upsert_images(
+            ids=ids, images=img_batch, meta_list=meta_batch, meta_dict=meta_dict
+        )
 
     print("Vectors Upserted!")
 
