@@ -6,7 +6,7 @@ import streamlit as st
 from PIL import Image
 from typing import List
 from libs.vectorstore.pinecone import PineconeIndex
-from sample_data.open_fashion_dataset import OpenFashionDataset
+from search.ecommerce.sample_data.dataset import OpenFashionDataset
 
 PINECONE_INDEX_NAME = "ecommerce-hybrid-image-search"
 
@@ -84,7 +84,7 @@ with st.container():
         st.session_state.images = []
 
         uploaded_file = st.file_uploader(
-            "Pesquise por imagens similares:",
+            "Pesquisa por imagens similares:",
             type=["jpg", "png"],
             accept_multiple_files=False,
         )

@@ -1,7 +1,7 @@
 from datasets import load_dataset
 
 
-class OpenFashionDataset:
+class EcommerceDataset:
     def load_dataset(
         self,
         dataset_name: str = "ashraq/fashion-product-images-small",

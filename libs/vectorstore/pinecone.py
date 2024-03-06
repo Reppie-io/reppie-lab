@@ -1,16 +1,26 @@
-from typing import List
-import streamlit as st
+import io
+import base64
 
-from pinecone import Pinecone
+from typing import List
 from PIL.Image import Image as ImageFile
+from pinecone import Pinecone, ServerlessSpec
 from libs.embedding.clip.encoder import CLIPEncoder
 from libs.embedding.bm25.encoder import Bm25Encoder
 
 
 class PineconeIndex:
     def __init__(self, api_key: str, index_name: str, bm25_fit_corpus: List[str]):
-        self.index = Pinecone(api_key=api_key).Index(index_name)
+        pinecone = Pinecone(api_key=api_key)
 
+        if index_name not in pinecone.list_indexes().names():
+            pinecone.create_index(
+                index_name,
+                dimension=512,
+                metric="dotproduct",
+                spec=ServerlessSpec(cloud="aws", region="us-west-2"),
+            )
+
+        self.index = pinecone.Index(index_name)
         self.dense_embedding = CLIPEncoder()
         self.sparse_embedding = Bm25Encoder(fit_corpus=bm25_fit_corpus)
 
@@ -64,5 +74,33 @@ class PineconeIndex:
 
         return result["matches"]
 
-    def upsert_vectors(self, vectors: List[dict]):
+    def upsert_images(
+        self, ids: List, images: List, meta_list: List, meta_dict: dict
+    ) -> None:
+
+        vectors = []
+
+        # create sparse BM25 vectors
+        sparse_embeds = self.sparse_embedding.encode_documents(
+            texts=[text for text in meta_list]
+        )
+
+        # create vectors values
+        dense_embeds = self.dense_embedding.encode(images)
+
+        for _id, dense, sparse, meta in zip(
+            ids, dense_embeds, sparse_embeds, meta_dict
+        ):
+            img_bytes = io.BytesIO()
+            image = images[int(_id)]
+
+            # Save the image to the in-memory stream in JPEG format
+            image.save(img_bytes, format="JPEG")
+
+            meta["image_b64"] = base64.b64encode(img_bytes.getvalue()).decode("utf-8")
+
+            vectors.append(
+                {"id": _id, "values": dense, "sparse_values": sparse, "metadata": meta}
+            )
+
         self.index.upsert(vectors)
