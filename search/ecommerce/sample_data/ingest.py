@@ -1,3 +1,5 @@
+# docker-compose run app python search/ecommerce/sample_data/ingest.py
+
 import os
 from tqdm.auto import tqdm
 from search.ecommerce.sample_data.dataset import (

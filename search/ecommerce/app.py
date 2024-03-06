@@ -6,21 +6,19 @@ import streamlit as st
 from PIL import Image
 from typing import List
 from libs.vectorstore.pinecone import PineconeIndex
-from search.ecommerce.sample_data.dataset import OpenFashionDataset
-
-PINECONE_INDEX_NAME = "ecommerce-hybrid-image-search"
+from search.ecommerce.sample_data.dataset import EcommerceDataset
 
 
 @st.cache_data
-def load_open_fashion_dataset():
-    return OpenFashionDataset().load_dataset()
+def load_ecommerce_dataset():
+    return EcommerceDataset().load_dataset()
 
 
 @st.cache_resource
 def load_vectorstore(bm25_fit_corpus: List[str]):
     return PineconeIndex(
         api_key=os.getenv("PINECONE_API_KEY"),
-        index_name=PINECONE_INDEX_NAME,
+        index_name=os.getenv("PINECONE_INDEX_NAME"),
         bm25_fit_corpus=bm25_fit_corpus,
     )
 
@@ -72,7 +70,7 @@ def display_images_grid(images: List[dict]) -> None:
 if "images" not in st.session_state:
     st.session_state.images = []
 
-bm25_fit_corpus = load_open_fashion_dataset()["productDisplayName"]
+bm25_fit_corpus = load_ecommerce_dataset()["productDisplayName"]
 vectorstore = load_vectorstore(bm25_fit_corpus=bm25_fit_corpus)
 
 with st.container():
