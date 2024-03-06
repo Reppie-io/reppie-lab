@@ -76,13 +76,13 @@ vectorstore = load_vectorstore(bm25_fit_corpus=bm25_fit_corpus)
 with st.container():
     st.title("Busca híbrida de imagens com CLIP, BM25 e Pinecone.")
 
-    on = st.toggle("Busca por imagem")
+    on = st.toggle("Pesquisa por imagem")
 
     if on:
         st.session_state.images = []
 
         uploaded_file = st.file_uploader(
-            "Pesquisa por imagens similares:",
+            "Pesquisa por imagem:",
             type=["jpg", "png"],
             accept_multiple_files=False,
         )
