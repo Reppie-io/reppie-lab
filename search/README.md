@@ -6,18 +6,18 @@ Keyword search is a traditional method of information retrieval where users inpu
 
 #### Key Characteristics:
 
-Relies on exact keyword matches.
-Results are based on the presence of keywords in documents.
-Limited understanding of context or semantics.
+1. Relies on exact keyword matches.
+2. Results are based on the presence of keywords in documents.
+3. Limited understanding of context or semantics.
 
 ### Semantic Search
 Semantic search goes beyond simple keyword matching by understanding the context, intent, and meaning behind search queries and documents. It employs natural language processing (NLP) and machine learning techniques to comprehend the nuances of language and provide more relevant search results.
 
 #### Key Characteristics:
 
-Analyzes the meaning and context of words and phrases.
-Considers synonyms, related concepts, and contextual clues.
-Provides more accurate and contextually relevant search results.
+1. Analyzes the meaning and context of words and phrases.
+2. Considers synonyms, related concepts, and contextual clues.
+3. Provides more accurate and contextually relevant search results.
 
 
 ### Hybrid Search
