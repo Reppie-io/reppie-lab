@@ -12,7 +12,7 @@ In this demonstration, we use the `all-MiniLM-L6-v2` model, a variant of the Min
 * Question Answering
 * Text summarization
 
-The all-MiniLM-L6-v2 model is available for download from the Hugging (Face Model Hub.)[https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2]
+The all-MiniLM-L6-v2 model is available for download from the [HuggingFace.](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2)
 
 #### BM25
 
@@ -20,10 +20,10 @@ For the keyword embeddings, we use BM25 embedding model. BM25 is a popular infor
 
 BM25 can be used for sparse vector embeddings, which are high-dimensional vectors that represent documents. In this context, each dimension of the vector corresponds to a term in the vocabulary, and the value of each dimension represents the frequency of that term in the document.
 
-Check Pinecone enconde sparse vectors (documentation)[https://docs.pinecone.io/docs/encode-sparse-vectors] for more details.
+Check Pinecone enconde sparse vectors [documentation](https://docs.pinecone.io/docs/encode-sparse-vectors) for more details.
 
 ### Dataset
-The demo utilizes a (sample dataset)[https://huggingface.co/datasets/BEE-spoke-data/medium-articles-en] suitable for media and content production industries.
+The demo utilizes a [sample dataset](https://huggingface.co/datasets/BEE-spoke-data/medium-articles-en) suitable for media and content production industries.
 
 ### How to Run
 To run the demo, follow these three steps:
