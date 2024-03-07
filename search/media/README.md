@@ -1,3 +1,34 @@
 ## Help Center Search
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae tincidunt tortor, at volutpat ex. In vestibulum purus tempus feugiat vestibulum. Vestibulum id nisi in mauris fringilla malesuada. Etiam vitae neque et leo placerat finibus. Donec placerat facilisis porta. Nullam enim nibh, ornare quis mauris rhoncus, dignissim cursus nibh. Aliquam dictum sapien vel velit sollicitudin, vel posuere ipsum auctor. Maecenas vitae turpis quis lectus ultricies imperdiet at nec metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris lacinia ex nisl, vel consequat sem fermentum vitae. Mauris a justo egestas, pretium tortor sodales, convallis tellus. Pellentesque dignissim condimentum est in luctus. Ut ut dapibus enim, nec facilisis risus. Nulla facilisi. Nunc blandit risus ac eros iaculis, sed ultrices augue dignissim. Maecenas dapibus turpis pulvinar tellus convallis, non aliquam arcu vulputate.
+This app provides a demonstration illustrating the application of hybrid search to enhance search relevance in media and content production industries.
+
+### Embeddings
+
+#### all-MiniLM-L6-v2
+In this demonstration, we use the `all-MiniLM-L6-v2` model, a variant of the MiniLM model, which is is a general-purpose model that can be used for a variety of tasks, including:
+* Semantic Search
+* Question Answering
+* Text summarization
+
+The all-MiniLM-L6-v2 model is available for download from the Hugging (Face Model Hub.)[https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2]
+
+#### BM25
+
+For the keyword embeddings, we use BM25 embedding model. BM25 is a popular information retrieval (IR) model that is often used for ranking documents in search results. It is a statistical model that takes into account the frequency of terms in a document, as well as the length of the document, to determine its relevance to a query.
+
+BM25 can be used for sparse vector embeddings, which are high-dimensional vectors that represent documents. In this context, each dimension of the vector corresponds to a term in the vocabulary, and the value of each dimension represents the frequency of that term in the document.
+
+Check Pinecone enconde sparse vectors (documentation)[https://docs.pinecone.io/docs/encode-sparse-vectors] for more details.
+
+### Dataset
+The demo utilizes a (sample dataset)[https://huggingface.co/datasets/BEE-spoke-data/medium-articles-en] suitable for media and content production industries.
+
+### How to Run
+To run the demo, follow these three steps:
+
+1. Add your Pinecone API Key to the docker-compose.yml file.
+2. Ingest the dataset into the vector store by executing the following command in this directory: docker-compose run app python search/media/sample_data/ingest.py. Note that for performance reasons, only a subset of the dataset may be ingested.
+3. With the data ready in the vector store, run the demo using docker-compose up and access localhost:8501 in your browser.
+
+### Limitations
+Please note that this is a demonstration intended for testing purposes only. If you require this use case with additional requirements or in a production environment, please contact us at contato@reppie.io.

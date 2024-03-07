@@ -2,8 +2,18 @@
 
 This app provides a demonstration illustrating the application of hybrid search to enhance search relevance in media and content production industries. The demo showcases two primary functionalities: searching for media content by image and searching for media content by text.
 
-### Multimodal Embedding
-Multimodal embeddings refer to representations that capture both textual and visual information. In this demonstration, we leverage the (CLIP model)[https://huggingface.co/sentence-transformers/clip-ViT-B-32] developed by OpenAI, allowing the creation of vectors from both text and images. For this demo, searches are conducted based on images using CLIP embeddings.
+### Embeddings
+
+#### CLIP
+ In this demonstration, we leverage the (CLIP model)[https://huggingface.co/sentence-transformers/clip-ViT-B-32] developed by OpenAI, allowing the creation of vectors from both text and images. It is a multimodal embedding modal which refers to representations that capture both textual and visual information.
+
+### BM25
+
+For the keyword embeddings, we use BM25 embedding model. BM25 is a popular information retrieval (IR) model that is often used for ranking documents in search results. It is a statistical model that takes into account the frequency of terms in a document, as well as the length of the document, to determine its relevance to a query.
+
+BM25 can be used for sparse vector embeddings, which are high-dimensional vectors that represent documents. In this context, each dimension of the vector corresponds to a term in the vocabulary, and the value of each dimension represents the frequency of that term in the document.
+
+Check Pinecone enconde sparse vectors (documentation)[https://docs.pinecone.io/docs/encode-sparse-vectors] for more details.
 
 ## Dataset
 The demo utilizes a (sample dataset)[https://huggingface.co/datasets/ashraq/fashion-product-images-small] suitable for ecommerce applications.
