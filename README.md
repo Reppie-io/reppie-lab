@@ -14,17 +14,17 @@ reppie-labs/
 │   ├── ecommerce/
 │   └── media/
 │
+├── summary/
+│   ├── sales/
+│   └── legal/
+│
 ├── chatbot-assistant/
 │   ├── customer-service/
 │   └── education/
 │
-├── image-generation/
+└── image-generation/
 │   ├── advertising/
 │   └── fashion/
-│
-└── <new-use-case..>/
-    ├── <industry 1..>/
-    └── <industry 2..>/
 ...
 ```
 
@@ -40,15 +40,15 @@ To run the demonstrations and examples in this repository, Docker is used for co
 Once Docker is installed, ensure that it's running properly on your system before proceeding.
 
 #### Pinecone Setup
-Pinecone serves as the vector store for the examples and demonstrations in this repository. Follow these steps to obtain an API key:
+Pinecone serves as the vector store for the demonstrations in this repository. Follow these steps to obtain an API key:
 
 1. **Sign Up**: If you haven't already, sign up for a Pinecone account here.
 2. **Dashboard**: Log in to your Pinecone account and navigate to the dashboard.
 3. **API Key**: In the dashboard, locate the section for API keys. Generate a new API key if you don't have one already.
 4. **Copy Key**: Once generated, copy your API key. This key will be used to authenticate your requests to the Pinecone service.
 
-Ensure that you keep your Pinecone API key secure and do not expose it in public repositories or insecure environments.
+⚠️ Ensure that you keep your Pinecone API key secure and do not expose it in public repositories or insecure environments.
 
 With Docker installed and your Pinecone API key ready, you're all set to explore the examples and demonstrations in the reppie-labs repository. 
 
-If you encounter any issues during setup or have questions about the process, feel free to reach out for [assistance](mailto: caio@reppie.io). Happy exploring!
+If you encounter any issues during setup or have questions about the process, feel free to reach out for assistance: caio@reppie.io. Happy exploring!
