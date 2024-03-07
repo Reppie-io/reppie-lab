@@ -2,6 +2,7 @@
 
 This app provides a demonstration illustrating the application of hybrid search to enhance search relevance in media and content production industries. The demo showcases two primary functionalities: searching for media content by image and searching for media content by text.
 
+<<<<<<< HEAD
 ### Embeddings
 
 #### CLIP
