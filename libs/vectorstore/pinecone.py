@@ -124,37 +124,14 @@ class Pinecone:
         texts: List[str],
         keyword_texts: List[str],
         metadata: List[dict],
-        chunk_size: int = 1000,
     ):
         vectors = []
 
         for _id, text, keyword_text, meta in zip(ids, texts, keyword_texts, metadata):
             print(f"Upserting {_id}, text: {text[:50]}...")
 
-            # create sparse BM25 vectors
             sparse_values = self.bm25_encoder.encode_documents(texts=keyword_text)
-
-            # text_splitter = RecursiveCharacterTextSplitter(
-            #     chunk_size=chunk_size,
-            #     chunk_overlap=50,
-            #     length_function=len,
-            #     is_separator_regex=False,
-            # )
-
-            # chunks = text_splitter.split_text(text)
-            # print(f"Text split into {len(chunks)} chunks")
-
-            # for idx, chunk in enumerate(chunks):
-            #     print(
-            #         f"Upserting chunk {idx+1} of {len(chunks)}, chunk: {chunk[:50]}..."
-            #     )
-
-            # create vectors values
             values = self.all_minilm_encoder.encode(texts=text)
-            # meta_chunk = meta
-            # meta_chunk["text"] = chunk
-
-            # print(f"metadata: {meta_chunk}")
 
             vectors.append(
                 {
