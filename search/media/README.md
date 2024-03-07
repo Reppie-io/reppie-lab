@@ -2,6 +2,8 @@
 
 This app provides a demonstration illustrating the application of hybrid search to enhance search relevance in media and content production industries.
 
+<img width="760" alt="image" src="https://github.com/Reppie-io/reppie-labs/assets/20309154/baed9dfd-d36c-429f-860e-b19f370abe83">
+
 ### Embeddings
 
 #### all-MiniLM-L6-v2
