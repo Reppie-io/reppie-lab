@@ -27,9 +27,6 @@ def ingest_dataset_into_vectorstore(
         ["token_count", "timestamp"]
     ).to_pandas()
 
-    # for i in range(30):
-    #     print(type(pandas_dataset["text"].tolist()[i]))
-
     for i in tqdm(range(0, len(media_dataset), batch_size)):
 
         # find end of batch
@@ -72,7 +69,7 @@ index_name = os.getenv("PINECONE_INDEX_NAME")
 vectorstore = Pinecone(
     api_key=os.getenv("PINECONE_API_KEY"),
     index_name=index_name,
-    bm25_fit_corpus=media_dataset["text"],
+    bm25_params_path="libs/embedding/bm25/bm25_media.json",
 )
 
 if index_name not in vectorstore.pinecone.list_indexes().names():

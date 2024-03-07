@@ -88,7 +88,7 @@ class Pinecone:
     def upsert_images(
         self,
         ids: List,
-        images: List[str],
+        images: List[ImageFile],
         keyword_texts: List[str],
         metadata: List[dict],
     ) -> None:
@@ -103,9 +103,12 @@ class Pinecone:
         # create vectors values
         dense_embeds = self.clip_encoder.encode(input=images)
 
-        for _id, dense, sparse, meta in zip(ids, dense_embeds, sparse_embeds, metadata):
+        for idx, (_id, dense, sparse, meta) in enumerate(
+            zip(ids, dense_embeds, sparse_embeds, metadata)
+        ):
             img_bytes = io.BytesIO()
-            image = images[int(_id)]
+
+            image = images[idx]
 
             # Save the image to the in-memory stream in JPEG format
             image.save(img_bytes, format="JPEG")

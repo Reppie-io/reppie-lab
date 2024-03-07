@@ -22,6 +22,8 @@ def update_results(results: List) -> None:
         blog_post_score = result["score"]
         blog_post_text = result["metadata"]["text"]
         blog_post_link = result["metadata"]["url"]
+        blog_post_authors = result["metadata"]["authors"]
+        blog_post_tags = result["metadata"]["tags"]
 
         results_blog_posts.append(
             {
@@ -29,6 +31,8 @@ def update_results(results: List) -> None:
                 "url": blog_post_link,
                 "text": blog_post_text,
                 "score": blog_post_score,
+                "authors": blog_post_authors,
+                "tags": blog_post_tags,
             }
         )
 
@@ -37,9 +41,14 @@ def update_results(results: List) -> None:
 
 def display_blog_posts(blog_posts: List[dict]) -> None:
     for blog_post in blog_posts:
-        st.write(f"Title: {blog_post['title']}")
-        st.write(f"Link: {blog_post['url']}")
-        st.write(f"Similary Score: {float(blog_post['score']):.4f}")
+        st.write(f"<b>Title:</b> {blog_post['title']}", unsafe_allow_html=True)
+        st.write(f"<b>Link:</b> {blog_post['url']}", unsafe_allow_html=True)
+        st.write(f"<b>Authors:</b> {blog_post['authors']}", unsafe_allow_html=True)
+        st.write(f"<b>Tags</b>: {blog_post['tags']}", unsafe_allow_html=True)
+        st.write(
+            f"<b>Similary Score:</b> {float(blog_post['score']):.4f}",
+            unsafe_allow_html=True,
+        )
 
         with st.expander("Text", expanded=False):
             st.write(blog_post["text"])
