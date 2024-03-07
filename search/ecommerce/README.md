@@ -2,6 +2,8 @@
 
 This app provides a demonstration illustrating the application of hybrid search to enhance search relevance in media and content production industries. The demo showcases two primary functionalities: searching for media content by image and searching for media content by text.
 
+<img width="760" alt="image" src="https://github.com/Reppie-io/reppie-labs/assets/20309154/a098476b-765b-48b0-a026-f740b59b45dc">
+
 ### Multimodal Embedding
 Multimodal embeddings refer to representations that capture both textual and visual information. In this demonstration, we leverage the (CLIP model)[https://huggingface.co/sentence-transformers/clip-ViT-B-32] developed by OpenAI, allowing the creation of vectors from both text and images. For this demo, searches are conducted based on images using CLIP embeddings.
 
