@@ -25,9 +25,9 @@ Hybrid search combines the strengths of keyword search and semantic search to en
 
 #### Key Characteristics:
 
-Integrates keyword matching with semantic analysis.
-Balances precision and recall in search results.
-Adapts to user preferences and behaviors for personalized results.
+1. Integrates keyword matching with semantic analysis. 
+2. Balances precision and recall in search results.
+3. Adapts to user preferences and behaviors for personalized results.
 
 ### Use Cases
 

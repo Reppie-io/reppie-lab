@@ -10,6 +10,8 @@ This repository is organized based on different use cases and industries where G
 ```
 reppie-labs/
 │
+|── libs/ # common libs shared between demos.
+|
 ├── search/
 │   ├── ecommerce/
 │   └── media/
@@ -51,4 +53,4 @@ Pinecone serves as the vector store for the demonstrations in this repository. F
 
 With Docker installed and your Pinecone API key ready, you're all set to explore the examples and demonstrations in the reppie-labs repository. 
 
-If you encounter any issues during setup or have questions about the process, feel free to reach out for assistance: caio@reppie.io. Happy exploring!
+If you encounter any issues during setup or have questions about the process, feel free to reach out for assistance: contato@reppie.io. Happy exploring!
