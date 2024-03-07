@@ -5,7 +5,7 @@ from tqdm.auto import tqdm
 from search.ecommerce.sample_data.dataset import (
     EcommerceDataset,
 )
-from libs.vectorstore.pinecone import PineconeIndex
+from libs.vectorstore.pinecone import Pinecone
 
 
 def load_ecommerce_dataset(
@@ -19,10 +19,10 @@ def load_ecommerce_dataset(
 
 def ingest_dataset_into_vectorstore(
     ecommerce_dataset: EcommerceDataset,
-    vectorstore_index: PineconeIndex,
+    vectorstore: Pinecone,
     batch_size: int = 200,
 ):
-    images = ecommerce_dataset["image"]
+    imgs = ecommerce_dataset["image"]
     metadata = ecommerce_dataset.remove_columns("image").to_pandas()
 
     for i in tqdm(range(0, len(ecommerce_dataset), batch_size)):
@@ -32,10 +32,10 @@ def ingest_dataset_into_vectorstore(
 
         # extract metadata batch
         meta_batch = metadata.iloc[i:i_end]
-        meta_dict = meta_batch.to_dict(orient="records")
+        metadata = meta_batch.to_dict(orient="records")
 
         # concatinate all metadata field except for id and year to form a single string
-        meta_batch = [
+        keyword_texts = [
             " ".join(x)
             for x in meta_batch.loc[
                 :, ~meta_batch.columns.isin(["id", "year"])
@@ -43,27 +43,33 @@ def ingest_dataset_into_vectorstore(
         ]
 
         # extract image batch
-        img_batch = images[i:i_end]
+        images = imgs[i:i_end]
 
         # create unique IDs
         ids = [str(x) for x in range(i, i_end)]
 
-        vectorstore_index.upsert_images(
-            ids=ids, images=img_batch, meta_list=meta_batch, meta_dict=meta_dict
+        vectorstore.upsert_images(
+            ids=ids, images=images, keyword_texts=keyword_texts, metadata=metadata
         )
 
     print("Vectors Upserted!")
 
 
 ecommerce_dataset = load_ecommerce_dataset(num_rows_to_ingest=10)
-pinecone_index = PineconeIndex(
+
+index_name = os.getenv("PINECONE_INDEX_NAME")
+
+vectorstore = Pinecone(
     api_key=os.getenv("PINECONE_API_KEY"),
-    index_name=os.getenv("PINECONE_INDEX_NAME"),
+    index_name=index_name,
     bm25_fit_corpus=ecommerce_dataset["productDisplayName"],
 )
 
+if index_name not in vectorstore.pinecone.list_indexes().names():
+    vectorstore.create_index(index_name=index_name, dimension=512)
+
 ingest_dataset_into_vectorstore(
     ecommerce_dataset=ecommerce_dataset,
-    vectorstore_index=pinecone_index,
+    vectorstore=vectorstore,
     batch_size=200,
 )

@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: reppie-labs-media
+    build: ../../.
+    volumes:
+      - ../..:/reppie-labs
+    ports:
+      - 8501:8501
+    command: streamlit run search/media/app.py --server.port=8501 --server.address=0.0.0.0
+    environment:
+      - PYTHONPATH=${PYTHONPATH}:/reppie-labs/search/media
+      - PINECONE_API_KEY=<YOUR PINECONE_API_KEY>
+      - PINECONE_INDEX_NAME=reppie-labs-media

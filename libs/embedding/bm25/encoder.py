@@ -3,9 +3,9 @@ from pinecone_text.sparse import BM25Encoder, SparseVector
 
 
 class Bm25Encoder:
-    def __init__(self, fit_corpus: List[str]):
+    def __init__(self, params_path: str):
         self.model = BM25Encoder()
-        self.model.fit(fit_corpus)
+        self.model.load(params_path)
 
     def encode_queries(self, texts: str | List[str]) -> List[SparseVector]:
         return self.model.encode_queries(texts=texts)

@@ -5,21 +5,15 @@ import streamlit as st
 
 from PIL import Image
 from typing import List
-from libs.vectorstore.pinecone import PineconeIndex
-from search.ecommerce.sample_data.dataset import EcommerceDataset
-
-
-@st.cache_data
-def load_ecommerce_dataset():
-    return EcommerceDataset().load_dataset()
+from libs.vectorstore.pinecone import Pinecone
 
 
 @st.cache_resource
-def load_vectorstore(bm25_fit_corpus: List[str]):
-    return PineconeIndex(
+def load_vectorstore():
+    return Pinecone(
         api_key=os.getenv("PINECONE_API_KEY"),
         index_name=os.getenv("PINECONE_INDEX_NAME"),
-        bm25_fit_corpus=bm25_fit_corpus,
+        bm25_params_path="libs/embedding/bm25/bm25_ecommerce.json"
     )
 
 
@@ -70,8 +64,7 @@ def display_images_grid(images: List[dict]) -> None:
 if "images" not in st.session_state:
     st.session_state.images = []
 
-bm25_fit_corpus = load_ecommerce_dataset()["productDisplayName"]
-vectorstore = load_vectorstore(bm25_fit_corpus=bm25_fit_corpus)
+vectorstore = load_vectorstore()
 
 with st.container():
     st.title("Busca híbrida de imagens com CLIP, BM25 e Pinecone.")
@@ -112,6 +105,7 @@ with st.container():
                 results = vectorstore.hybrid_search(
                     query=query,
                     alpha=hybrid_alpha,
+                    is_image_search=True,
                 )
                 update_results(results)
 

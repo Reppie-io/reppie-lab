@@ -4,4 +4,5 @@ pinecone-text
 protobuf==3.20.3
 sentence-transformers
 streamlit
-transformers 
+transformers
+langchain-text-splitters
