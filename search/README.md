@@ -45,4 +45,4 @@ These examples of e-commerce and media represent just a peek into the versatilit
 
 Whether you're in healthcare, finance, education, or any other sector, keyword, semantic, and hybrid search methodologies hold immense potential for improving search relevance and user engagement. 
 
-If you're interested in learning more about how these techniques can benefit your industry or organization, feel free to reach out to us at contato@reppie.io for further information.
+If you're interested in learning more about how these techniques can benefit your industry or organization, feel free to reach out to us: contato@reppie.io for further information.

@@ -1,3 +1,19 @@
 ## Ecommerce Search
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae tincidunt tortor, at volutpat ex. In vestibulum purus tempus feugiat vestibulum. Vestibulum id nisi in mauris fringilla malesuada. Etiam vitae neque et leo placerat finibus. Donec placerat facilisis porta. Nullam enim nibh, ornare quis mauris rhoncus, dignissim cursus nibh. Aliquam dictum sapien vel velit sollicitudin, vel posuere ipsum auctor. Maecenas vitae turpis quis lectus ultricies imperdiet at nec metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris lacinia ex nisl, vel consequat sem fermentum vitae. Mauris a justo egestas, pretium tortor sodales, convallis tellus. Pellentesque dignissim condimentum est in luctus. Ut ut dapibus enim, nec facilisis risus. Nulla facilisi. Nunc blandit risus ac eros iaculis, sed ultrices augue dignissim. Maecenas dapibus turpis pulvinar tellus convallis, non aliquam arcu vulputate.
+This app provides a demonstration illustrating the application of hybrid search to enhance search relevance in media and content production industries. The demo showcases two primary functionalities: searching for media content by image and searching for media content by text.
+
+### Multimodal Embedding
+Multimodal embeddings refer to representations that capture both textual and visual information. In this demonstration, we leverage the (CLIP model)[https://huggingface.co/sentence-transformers/clip-ViT-B-32] developed by OpenAI, allowing the creation of vectors from both text and images. For this demo, searches are conducted based on images using CLIP embeddings.
+
+## Dataset
+The demo utilizes a (sample dataset)[https://huggingface.co/datasets/ashraq/fashion-product-images-small] suitable for ecommerce applications.
+
+### How to Run
+To run the demo, follow these three steps:
+
+1. Add your Pinecone API Key to the docker-compose.yml file.
+2. Ingest the dataset into the vector store by executing the following command in this directory: `docker-compose run app python search/media/sample_data/ingest.py`. Note that for performance reasons, only a subset of the dataset may be ingested (10000 products).
+3. With the data ready in the vector store, run the demo using `docker-compose up` and access `localhost:8501` in your browser.
+
+### Limitations
+Please note that this is a demonstration intended for testing purposes only. If you require this use case with additional requirements or in a production environment, please contact us: contato@reppie.io.

@@ -30,7 +30,7 @@ reppie-labs/
 ...
 ```
 
-We are continuously adding new use cases and industries into this repository to provide a comprehensive overview of Generative AI applications. However, if you are interested in exploring a specific use case or industry that is not yet included in the repository, feel free to reach out to Reppie: contato@reppie.io. 
+We are continuously adding new use cases and industries into this repository to provide a comprehensive overview of Generative AI applications. However, if you are interested in exploring a specific use case or industry that is not yet included in the repository, feel free to reach out to us: contato@reppie.io. 
 
 We are open to collaboration and eager to discuss how we can assist you in exploring the potential of Generative AI for your specific needs.
 
