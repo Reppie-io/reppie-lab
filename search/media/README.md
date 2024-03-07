@@ -1,4 +1,4 @@
-## Help Center Search
+## Media Search
 
 This app provides a demonstration illustrating the application of hybrid search to enhance search relevance in media and content production such as blogs, websites, help center articles, streaming services, etc.
 
