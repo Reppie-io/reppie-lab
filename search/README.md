@@ -39,6 +39,8 @@ In e-commerce, keyword search enables users to find specific products efficientl
 
 In media and content production industries such as blogs, websites, and social media platforms, keyword search allows users to locate specific content quickly, while semantic search enhances understanding of user intent for more relevant results. Hybrid search combines both approaches to optimize user engagement, delivering tailored content based on individual preferences and browsing history, thereby improving overall content discovery and user satisfaction.
 
+#### Your industry
+
 These examples of e-commerce and media represent just a peek into the versatility of these search techniques. They can be adapted and applied across various industries to enhance user experiences and streamline content discovery. 
 
 Whether you're in healthcare, finance, education, or any other sector, keyword, semantic, and hybrid search methodologies hold immense potential for improving search relevance and user engagement. 
