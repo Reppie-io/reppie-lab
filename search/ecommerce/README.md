@@ -1,6 +1,6 @@
 ## Ecommerce Search
 
-This app provides a demonstration illustrating the application of hybrid search to enhance search relevance in e-commerce platforms. The demo showcases two primary functionalities: searching for media content by image and searching for media content by text.
+This app provides a demonstration illustrating the application of hybrid search to enhance search relevance in e-commerce platforms. The demo showcases two primary functionalities: searching for products by image and searching for products by text.
 
 <img width="736" alt="image" src="https://github.com/Reppie-io/reppie-labs/assets/20309154/e4d2ce44-c780-4e29-8ef2-e68da6276fd0">
 
