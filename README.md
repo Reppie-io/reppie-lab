@@ -37,11 +37,11 @@ We are open to collaboration and eager to discuss how we can assist you in explo
 ### Setup Instructions
 
 #### Docker Installation
-To run the demonstrations and examples in this repository, Docker is used for containerization, ensuring consistent environments across different systems. Follow these steps to install Docker:
+To run the demonstrations and examples in this repository, Docker is used for containerization, ensuring consistent environments across different systems. Follow the [instructions](https://docs.docker.com/get-docker/) provided in the official Docker documentation.
 
-1. **Linux**: Follow the [instructions](https://docs.docker.com/desktop/install/linux-install/) provided in the official Docker documentation.
-2. **Windows**: Download and install Docker Desktop on [Windows](https://docs.docker.com/desktop/install/windows-install/).
-3. **macOS**: Install Docker Desktop for [Mac](https://docs.docker.com/desktop/install/mac-install/).
+1. **Linux**: Install Docker Desktop on [Linux](https://docs.docker.com/desktop/install/linux-install/).
+2. **Windows**: Install Docker Desktop on [Windows](https://docs.docker.com/desktop/install/windows-install/).
+3. **macOS**: Install Docker Desktop fon [Mac](https://docs.docker.com/desktop/install/mac-install/).
 
 Once Docker is installed, ensure that it's running properly on your system before proceeding.
 
