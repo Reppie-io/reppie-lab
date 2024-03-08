@@ -20,7 +20,7 @@ For the keyword embeddings, we use BM25 embedding model. BM25 is a popular infor
 
 BM25 can be used for sparse vector embeddings, which are high-dimensional vectors that represent documents. In this context, each dimension of the vector corresponds to a term in the vocabulary, and the value of each dimension represents the frequency of that term in the document.
 
-Check Pinecone enconde sparse vectors [documentation](https://docs.pinecone.io/docs/encode-sparse-vectors) for more details.
+Check Pinecone encode sparse vectors [documentation](https://docs.pinecone.io/docs/encode-sparse-vectors) for more details.
 
 ### Dataset
 The demo utilizes a [sample dataset](https://huggingface.co/datasets/BEE-spoke-data/medium-articles-en) suitable for media and content production industries.
