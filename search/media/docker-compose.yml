@@ -11,5 +11,5 @@ services:
     command: streamlit run search/media/app.py --server.port=8501 --server.address=0.0.0.0
     environment:
       - PYTHONPATH=${PYTHONPATH}:/reppie-labs/search/media
-      - PINECONE_API_KEY=ad32bc99-43d3-4b9d-bf00-af4ef34c9a33
+      - PINECONE_API_KEY=<YOUR PINECONE_API_KEY>
       - PINECONE_INDEX_NAME=reppie-labs-media
