@@ -39,16 +39,16 @@ We are open to collaboration and eager to discuss how we can assist you in explo
 #### Docker Installation
 To run the demonstrations and examples in this repository, Docker is used for containerization, ensuring consistent environments across different systems. Follow these steps to install Docker:
 
-1. **Linux**: Follow the instructions provided in the official Docker documentation.
-2. **Windows**: Download and install Docker Desktop from the Docker Hub.
-3. **macOS**: Install Docker Desktop for Mac from the Docker Hub.
+1. **Linux**: Follow the [instructions](https://docs.docker.com/desktop/install/linux-install/) provided in the official Docker documentation.
+2. **Windows**: Download and install Docker Desktop on [Windows](https://docs.docker.com/desktop/install/windows-install/).
+3. **macOS**: Install Docker Desktop for [Mac](https://docs.docker.com/desktop/install/mac-install/).
 
 Once Docker is installed, ensure that it's running properly on your system before proceeding.
 
 #### Pinecone Setup
 Pinecone serves as the vector store for the demonstrations in this repository. Follow these steps to obtain an API key:
 
-1. **Sign Up**: If you haven't already, sign up for a Pinecone account here.
+1. **Sign Up**: If you haven't already, sign up for a Pinecone account [here](https://app.pinecone.io/?sessionType=signup).
 2. **Dashboard**: Log in to your Pinecone account and navigate to the dashboard.
 3. **API Key**: In the dashboard, locate the section for API keys. Generate a new API key if you don't have one already.
 4. **Copy Key**: Once generated, copy your API key. This key will be used to authenticate your requests to the Pinecone service.
