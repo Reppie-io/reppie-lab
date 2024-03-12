@@ -1,6 +1,6 @@
 ## reppie-labs
 
-Welcome to the reppie-labs repository! This repository showcases practical examples of how Generative AI is being used to solve problems and drive innovation across various industries. You will find clear demonstrations of real-world Generative AI applications that you can learn from and build upon.
+Welcome to the **reppie-labs** repository! This repository showcases practical examples of how Generative AI is being used to solve problems and drive innovation across various industries. You will find clear demonstrations of real-world Generative AI applications that you can learn from and build upon.
 
 
 ### Repository organization
