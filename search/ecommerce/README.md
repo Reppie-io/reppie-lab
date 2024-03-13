@@ -40,13 +40,11 @@ Here's a breakdown of each step:
 **Step 2: Ingest Dataset**
 
 1. Open your terminal application (Command Prompt on Windows, Terminal on macOS/Linux).
-2. Make sure you are in the same directory where the `docker-compose.yml` file is located. You can use the `pwd` command to verify your current directory.
+2. Make sure you are in the directory set as `[...]/reppie-labs/search/ecommerce`. You can use the `pwd` command to verify your current directory.
 3. Run the following command to ingest the dataset into the vector store:
 
-   #shouldn't be docker-compose run app python reppie-labs/search/ecommerce/sample_data/ingest.py ??
-
 ```bash
-docker-compose run app python search/media/sample_data/ingest.py
+docker-compose run app python search/ecommerce/sample_data/ingest.py
 ```
 
 **Note:**
@@ -61,9 +59,9 @@ For performance reasons, only a subset of the dataset (10,000 products) might be
 docker-compose up
 ```
 
-2. Once the services are up and running, open your web browser and navigate to `http://localhost:8501`. This should launch the product search demo application.
+2. Once the services are up and running, open your web browser and navigate to `http://localhost:8501`. This will launch the product search demo application.
 
-**By following these steps, you should be able to run the ecommerce search demo application.**
+**By following these steps, you should be able to run the e-commerce search demo application.**
 
 ### Limitations
-Please note that this is a demonstration intended for testing purposes only. If you require this use case with additional requirements or in a production environment, please contact us: contato@reppie.io.
+Please note that this is a demonstration intended for testing purposes only. If you require this use case with additional requirements or in a production environment, please contact us at contato@reppie.io .
