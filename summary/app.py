@@ -10,7 +10,7 @@ from langchain.chains.combine_documents.stuff import StuffDocumentsChain
 
 
 def save_file(file):
-    folder = "tmp"
+    folder = "summary/tmp"
     if not os.path.exists(folder):
         os.makedirs(folder)
 
@@ -41,7 +41,7 @@ def stuff_summarize(docs: List[dict], llm: ChatOpenAI):
     return stuff_chain.invoke(docs)
 
 
-def summarize_file(file, chain_type="stuff"):
+def summarize_file(file):
     file_path = save_file(file)
 
     file_loader = UnstructuredFileLoader(file_path)
@@ -49,7 +49,6 @@ def summarize_file(file, chain_type="stuff"):
 
     llm = ChatOpenAI(
         model="gpt-4-turbo-preview",
-        api_key="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",
     )
 
     st.write(stuff_summarize(docs=file_docs, llm=llm))

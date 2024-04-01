@@ -1,4 +1,6 @@
 datasets 
+langchain
+langchain-openai
 langchain-text-splitters
 pinecone-client 
 pinecone-text 
