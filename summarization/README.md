@@ -6,7 +6,7 @@ This README provides an overview of how LLMs can be used for summary generation.
 
 Content summarization, powered by LLMs, has a wide variety of applications across various industries. Below, we explore three use cases, including the application of summarizing sales calls transcriptions, and two additional examples demonstrating the versatility of content summarization.
 
-#### Sales Calls Summarization in the Sales Industry
+#### Sales Calls Summarization
 
 Sales reps often participate in numerous sales calls throughout the day, making it challenging to capture and analyze every detail. Automatically summarizing sales calls allows sales professionals to quickly capture the essence of each conversation, including customer concerns, preferences, and objections, without having to listen to hours of recordings.
 
