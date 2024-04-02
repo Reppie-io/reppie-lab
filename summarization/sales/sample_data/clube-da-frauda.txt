@@ -1,0 +1,122 @@
+[
+    {
+        "start": 1.829,
+        "end": 12.553,
+        "speaker": "Helena",
+        "text": " Bom dia, Edgar. Aqui é a Helena da Reppie. Espero que você esteja bem. Entendo que você é o coordenador de vendas no Clube da Frauda, correto?"
+    },
+    {
+        "start": 12.553,
+        "end": 20.516,
+        "speaker": "Edgar",
+        "text": "Sim, é isso mesmo. Olá, Helena. Prazer em conhecê-la. Como posso ajudar?"
+    },
+    {
+        "start": 20.516,
+        "end": 39.393,
+        "speaker": "Helena",
+        "text": "Com certeza, obrigada. Tenho observado o Clube da Frauda e o seu inovador serviço de assinatura de fraudas.  Veja um grande potencial para otimizar o desempenho da sua equipe de vendas. Antes de prosseguirmos, você poderia compartilhar um pouco sobre o seu processo de vendas atual e os desafios que vocês estão enfrentando?"
+    },
+    {
+        "start": 39.393,
+        "end": 57.127,
+        "speaker": "Edgar",
+        "text": "Claro! Nosso processo de vendas envolve entrar em contato com potenciais clientes por meio de ligações e e-mails. Um dos nossos desafios é que nossos vendedores frequentemente têm dificuldade em transmitir o valor único do nosso serviço de assinatura e abordar as preocupações dos clientes de forma eficaz."
+    },
+    {
+        "start": 57.438,
+        "end": 72.083,
+        "speaker": "Helena",
+        "text": " Agradeço por compartilhar isso, Edgar. É importante abordar esses desafios para garantir o sucesso da sua equipe. É aí que a Reppiee pode entrar. Como vocês lidam atualmente com a gravação e análise de ligações para os seus vendedores?"
+    },
+    {
+        "start": 72.083,
+        "end": 83.167,
+        "speaker": "Edgar",
+        "text": "Atualmente, gravamos as ligações, mas o processo de análise é bastante manual. Não temos uma forma estruturada de avaliar o que está funcionando e o que precisa de melhorias."
+    },
+    {
+        "start": 83.167,
+        "end": 102.576,
+        "speaker": "Helena",
+        "text": "Isso faz sentido, Edgar.  A análise manual pode ser demorada e talvez não forneça as informações detalhadas que vocês precisam. Com a Repeat, automatizamos esse processo e fornecemos uma avaliação estruturada com base em metodologias comprovadas, como os TIM. Como vocês imaginam melhorar o desempenho da equipe de vendas?"
+    },
+    {
+        "start": 102.576,
+        "end": 119.702,
+        "speaker": "Edgar",
+        "text": "Estamos buscando uma solução que possa ajudar nossos vendedores a entender melhor os pontos problemáticos dos clientes e a comunicar de forma eficaz como o nosso serviço de assinatura pode abordar esses pontos.  Além disso, agilizar o processo de treinamento para os gestores seria um benefício."
+    },
+    {
+        "start": 119.702,
+        "end": 145.062,
+        "speaker": "Helena",
+        "text": "São metas valiosas, Edgar. A HEPI foi projetada exatamente para isso. Identificando os pontos problemáticos nas ligações e avaliando como seus vendedores estão abordando esses pontos, nossa plataforma pode fornecer informações acionáveis. Além disso, nossa plataforma permite que os gestores ofereçam treinamento direcionado com base em áreas específicas de melhoria.  Como vocês medem atualmente o sucesso da sua equipe de vendas?"
+    },
+    {
+        "start": 145.062,
+        "end": 156.727,
+        "speaker": "Edgar",
+        "text": "Atualmente, acompanhamos métricas como taxas de conversão e receita gerada por cada vendedor. No entanto, estamos abertos a formas mais sofisticadas de avaliar o sucesso."
+    },
+    {
+        "start": 156.727,
+        "end": 177.487,
+        "speaker": "Helena",
+        "text": "Fico feliz que estejam abertos a explorar novas abordagens. A Repeat vai além das métricas básicas. Ela fornece avaliações detalhadas de desempenho e ajuda a rastrear a eficácia do seu playbook de vendas.  Ao implementar a metodologia SPIN e outras estratégias, vocês terão uma visão abrangente do sucesso da... Isso soa abrangente."
+    },
+    {
+        "start": 177.487,
+        "end": 181.309,
+        "speaker": "Edgar",
+        "text": "Mas será que a plataforma se encaixa no nosso playbookla de vendas?"
+    },
+    {
+        "start": 181.309,
+        "end": 200.561,
+        "speaker": "Helena",
+        "text": "Com certeza, Edgar. Embora forneçamos um modelo de playbookla padrão, a Repeat também pode ser personalizada para se adequar ao seu processo de vendas específico. Entendemos que cada empresa tem sua abordagem única.  Nossa plataforma pode se adaptar ao playbook de vendas do Clube da Frauda, garantindo uma integração perfeita."
+    },
+    {
+        "start": 200.561,
+        "end": 205.243,
+        "speaker": "Edgar",
+        "text": "Isso é importante para nós. Como começaríamos com a Repeat?"
+    },
+    {
+        "start": 205.243,
+        "end": 223.914,
+        "speaker": "Helena",
+        "text": "Fico feliz que você esteja interessado. Nosso processo de integração é simples. Começaríamos integrando a Repeat ao seu sistema de gravação de chamadas existente.  Em seguida, nossa equipe trabalhará em conjunto com a sua para ajustar a plataforma às suas necessidades e fornecer treinamento para garantir uma transição tranquila."
+    },
+    {
+        "start": 223.914,
+        "end": 234.322,
+        "speaker": "Edgar",
+        "text": "E isso soa razoável. Agradeço pelas informações detalhadas, Helena. Vamos agendar uma demonstração para ver como a Reppie funciona na prática."
+    },
+    {
+        "start": 234.322,
+        "end": 249.179,
+        "speaker": "Helena",
+        "text": "Isso é fantástico de ouvir, Edgar. Uma demonstração certamente lhe dará uma visão mais clara de como a Reppie pode abordar os desafios específicos do Clube da Frauda.  Entrarei em contato para agendar a demonstração. Obrigada pelo seu tempo hoje."
+    },
+    {
+        "start": 249.179,
+        "end": 255.523,
+        "speaker": "Edgar",
+        "text": "Obrigado, Helena. Estou ansioso por isso. Tenham um ótimo dia."
+    },
+    {
+        "start": 255.523,
+        "end": 258.725,
+        "speaker": "Helena",
+        "text": "Você também, Edgar. Até breve."
+    },
+    {
+        "start": 258.725,
+        "end": 260.006,
+        "speaker": "Edgar",
+        "text": "Até logo, Helena."
+    }
+]
