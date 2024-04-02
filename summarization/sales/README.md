@@ -42,7 +42,7 @@ We provide a fictitious sales call transcription in `summarization/sales/sample_
 
 ## Acknowledgments
 
-This project utilizes OpenAI's GPT-4-turbo model for generating summaries.
+This demo utilizes OpenAI's GPT-4-turbo model for generating summaries.
 
 ## Limitations
 
