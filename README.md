@@ -58,7 +58,18 @@ Pinecone is used as the vector store for the examples in this repository. To [se
 
 ⚠️ Important: Keep your Pinecone API key confidential and avoid exposing it in public repositories or insecure environments. Treat it as sensitive information to maintain the security of your Pinecone account.
 
-With Docker installed and your Pinecone API key ready, you have everything you need to start exploring the examples and demonstrations provided in the **reppie-labs** repository.
+#### 3. Creating an OpenAI Account and API Key
+
+Follow these steps to set up your OpenAI account and generate an API key:
+
+1. **Sign Up for OpenAI**: Go to the OpenAI website (https://openai.com/), click on the 'Sign Up' button. Fill in your details and follow the prompts to create an account. Ignore this step if you already have a account.
+
+2. **Create an API Key**: Once logged in, navigate to the API section by clicking on 'API' in the menu. In the API dashboard, click on 'Create new key'. Give your key a name and select the appropriate access and permissions.
+
+3. **Secure Your API Key**: Copy the API key to a secure location; you won't be able to see it again.
+Use this key in your application to authenticate with OpenAI's services. Remember to keep your API key confidential to protect your account and services.
+
+With Docker installed and your Pinecone and OpenAI API keys ready, you have everything you need to start exploring the examples and demonstrations provided in the **reppie-labs** repository.
 If you have any questions or encounter issues during the setup process, feel free to reach out at contato@reppie.io. 
 
 Happy exploring!
