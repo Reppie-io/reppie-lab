@@ -51,7 +51,7 @@
         "start": 119.702,
         "end": 145.062,
         "speaker": "Helena",
-        "text": "São metas valiosas, Edgar. A HEPI foi projetada exatamente para isso. Identificando os pontos problemáticos nas ligações e avaliando como seus vendedores estão abordando esses pontos, nossa plataforma pode fornecer informações acionáveis. Além disso, nossa plataforma permite que os gestores ofereçam treinamento direcionado com base em áreas específicas de melhoria.  Como vocês medem atualmente o sucesso da sua equipe de vendas?"
+        "text": "São metas valiosas, Edgar. A Reppie foi projetada exatamente para isso. Identificando os pontos problemáticos nas ligações e avaliando como seus vendedores estão abordando esses pontos, nossa plataforma pode fornecer informações acionáveis. Além disso, nossa plataforma permite que os gestores ofereçam treinamento direcionado com base em áreas específicas de melhoria.  Como vocês medem atualmente o sucesso da sua equipe de vendas?"
     },
     {
         "start": 145.062,

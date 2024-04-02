@@ -157,8 +157,7 @@ cython_debug/
 .streamlit/
 
 # Temporary files
-*/tmp
-*/temp
+tmp/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
