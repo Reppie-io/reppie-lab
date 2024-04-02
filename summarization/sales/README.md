@@ -38,7 +38,7 @@ The "Refine" technique focuses on iteratively improving the quality of a summary
 
 ### Sample Data
 
-We provide a fictitious sales call transcription in `sample_data' directory to be used as example in the app.
+We provide a fictitious sales call transcription in `summarization/sales/sample_data` directory to be used as example in the app.
 
 ## Acknowledgments
 
