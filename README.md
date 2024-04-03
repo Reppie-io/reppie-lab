@@ -20,7 +20,7 @@ reppie-labs/
 │   ├── ecommerce/
 │   └── content/
 │
-├── summary/
+├── summarization/
 │   ├── sales/
 │   └── legal/
 │
