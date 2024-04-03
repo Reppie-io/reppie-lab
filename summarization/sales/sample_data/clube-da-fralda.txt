@@ -3,7 +3,7 @@
         "start": 1.829,
         "end": 12.553,
         "speaker": "Helena",
-        "text": " Bom dia, Edgar. Aqui é a Helena da Reppie. Espero que você esteja bem. Entendo que você é o coordenador de vendas no Clube da Frauda, correto?"
+        "text": " Bom dia, Edgar. Aqui é a Helena da Reppie. Espero que você esteja bem. Entendo que você é o coordenador de vendas no Clube da Fralda, correto?"
     },
     {
         "start": 12.553,
@@ -15,7 +15,7 @@
         "start": 20.516,
         "end": 39.393,
         "speaker": "Helena",
-        "text": "Com certeza, obrigada. Tenho observado o Clube da Frauda e o seu inovador serviço de assinatura de fraudas.  Veja um grande potencial para otimizar o desempenho da sua equipe de vendas. Antes de prosseguirmos, você poderia compartilhar um pouco sobre o seu processo de vendas atual e os desafios que vocês estão enfrentando?"
+        "text": "Com certeza, obrigada. Tenho observado o Clube da Fralda e o seu inovador serviço de assinatura de fraldas.  Veja um grande potencial para otimizar o desempenho da sua equipe de vendas. Antes de prosseguirmos, você poderia compartilhar um pouco sobre o seu processo de vendas atual e os desafios que vocês estão enfrentando?"
     },
     {
         "start": 39.393,
@@ -63,31 +63,31 @@
         "start": 156.727,
         "end": 177.487,
         "speaker": "Helena",
-        "text": "Fico feliz que estejam abertos a explorar novas abordagens. A Repeat vai além das métricas básicas. Ela fornece avaliações detalhadas de desempenho e ajuda a rastrear a eficácia do seu playbook de vendas.  Ao implementar a metodologia SPIN e outras estratégias, vocês terão uma visão abrangente do sucesso da... Isso soa abrangente."
+        "text": "Fico feliz que estejam abertos a explorar novas abordagens. A Reppie vai além das métricas básicas. Ela fornece avaliações detalhadas de desempenho e ajuda a rastrear a eficácia do seu playbook de vendas.  Ao implementar a metodologia SPIN e outras estratégias, vocês terão uma visão abrangente do sucesso da "
     },
     {
         "start": 177.487,
         "end": 181.309,
         "speaker": "Edgar",
-        "text": "Mas será que a plataforma se encaixa no nosso playbookla de vendas?"
+        "text": "Isso soa abrangente. Mas será que a plataforma se encaixa no nosso playbook de vendas?"
     },
     {
         "start": 181.309,
         "end": 200.561,
         "speaker": "Helena",
-        "text": "Com certeza, Edgar. Embora forneçamos um modelo de playbookla padrão, a Repeat também pode ser personalizada para se adequar ao seu processo de vendas específico. Entendemos que cada empresa tem sua abordagem única.  Nossa plataforma pode se adaptar ao playbook de vendas do Clube da Frauda, garantindo uma integração perfeita."
+        "text": "Com certeza, Edgar. Embora forneçamos um modelo de playbook padrão, a Reppie também pode ser personalizada para se adequar ao seu processo de vendas específico. Entendemos que cada empresa tem sua abordagem única.  Nossa plataforma pode se adaptar ao playbook de vendas do Clube da Fralda, garantindo uma integração perfeita."
     },
     {
         "start": 200.561,
         "end": 205.243,
         "speaker": "Edgar",
-        "text": "Isso é importante para nós. Como começaríamos com a Repeat?"
+        "text": "Isso é importante para nós. Como começaríamos com a Reppie?"
     },
     {
         "start": 205.243,
         "end": 223.914,
         "speaker": "Helena",
-        "text": "Fico feliz que você esteja interessado. Nosso processo de integração é simples. Começaríamos integrando a Repeat ao seu sistema de gravação de chamadas existente.  Em seguida, nossa equipe trabalhará em conjunto com a sua para ajustar a plataforma às suas necessidades e fornecer treinamento para garantir uma transição tranquila."
+        "text": "Fico feliz que você esteja interessado. Nosso processo de integração é simples. Começaríamos integrando a Reppie ao seu sistema de gravação de chamadas existente.  Em seguida, nossa equipe trabalhará em conjunto com a sua para ajustar a plataforma às suas necessidades e fornecer treinamento para garantir uma transição tranquila."
     },
     {
         "start": 223.914,
@@ -99,7 +99,7 @@
         "start": 234.322,
         "end": 249.179,
         "speaker": "Helena",
-        "text": "Isso é fantástico de ouvir, Edgar. Uma demonstração certamente lhe dará uma visão mais clara de como a Reppie pode abordar os desafios específicos do Clube da Frauda.  Entrarei em contato para agendar a demonstração. Obrigada pelo seu tempo hoje."
+        "text": "Isso é fantástico de ouvir, Edgar. Uma demonstração certamente lhe dará uma visão mais clara de como a Reppie pode abordar os desafios específicos do Clube da Fralda.  Entrarei em contato para agendar a demonstração. Obrigada pelo seu tempo hoje."
     },
     {
         "start": 249.179,
