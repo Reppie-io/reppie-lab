@@ -51,14 +51,7 @@ See the official [Docker documentation](https://docs.docker.com/get-docker/) for
 
 After installing Docker, ensure that it is running properly on your system before moving forward.
 
-#### 2. Pinecone Setup
-Pinecone is used as the vector store for the examples in this repository. To [set up Pinecone](https://docs.pinecone.io/docs/quickstart) and obtain an API key, follow these steps:
-1. **Login or Sign up**: If you don't have a Pinecone account, sign up for one by visiting the [Pinecone website](https://app.pinecone.io/?sessionType=signup) and completing the registration process.
-2. **Get your API Key**: Open the Pinecone Console, go to API Keys, and copy your API key to a secure location. This key will be required to authenticate your requests when interacting with the Pinecone service.
-
-⚠️ Important: Keep your Pinecone API key confidential and avoid exposing it in public repositories or insecure environments. Treat it as sensitive information to maintain the security of your Pinecone account.
-
-#### 3. Creating an OpenAI Account and API Key
+#### 2. Creating an OpenAI Account and API Key
 
 Follow these steps to set up your OpenAI account and generate an API key:
 
@@ -69,7 +62,7 @@ Follow these steps to set up your OpenAI account and generate an API key:
 3. **Secure Your API Key**: Copy the API key to a secure location; you won't be able to see it again.
 Use this key in your application to authenticate with OpenAI's services. Remember to keep your API key confidential to protect your account and services.
 
-With Docker installed and your Pinecone and OpenAI API keys ready, you have everything you need to start exploring the examples and demonstrations provided in the **reppie-labs** repository.
+With Docker installed and your OpenAI API key ready, you have everything you need to start exploring the examples and demonstrations provided in the **reppie-labs** repository.
 If you have any questions or encounter issues during the setup process, feel free to reach out at contato@reppie.io. 
 
 Happy exploring!
