@@ -1,18 +1,18 @@
-## reppie-labs
+## reppie-lab
 
-Welcome to the **reppie-labs** repository! 
+Welcome to the **reppie-lab** repository! 
 
 This repository showcases practical examples of how Generative AI is being used to solve problems and drive innovation across various industries. You will find clear demonstrations of real-world Generative AI applications that you can learn from and build upon.
 
 
 ### Repository organization
 
-**reppie-labs** is structured around specific use cases. Each use case folder includes relevant industry examples, making it easy to grasp the code's practical applications.
+**reppie-lab** is structured around specific use cases. Each use case folder includes relevant industry examples, making it easy to grasp the code's practical applications.
 
 The repository organization:
 
 ```
-reppie-labs/
+reppie-lab/
 │
 |── libs/ # common libs shared between applications.
 |
