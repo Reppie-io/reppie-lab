@@ -4,7 +4,7 @@ This README provides an overview of basic concepts related to keyword search, se
 ### Keyword Search
 Keyword search is a traditional method of information retrieval where users input specific words or phrases into a search engine. The search engine matches these keywords with the content of documents or web pages and returns results that contain the exact keywords or related variants.
 
-#### Key Characteristics:
+#### Key Characteristics
 
 1. Relies on exact keyword matches.
 2. Results are based on the presence of keywords in documents.
