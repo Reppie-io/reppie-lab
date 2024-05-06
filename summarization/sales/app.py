@@ -121,9 +121,9 @@ with st.container():
             "Modos disponíveis:",
             ["Stuff", "Map-Reduce", "Refine"],
             captions=[
-                "Insere a transcrição inteira no contexto do modelo de linguagem (LLM). Ideal para transcrições com até 500k palavras. (GPT-4-Turbo)",  # noqa: E501
-                'Primeiro resume os trechos da transcrição separadamente e depois "combina" todos os resumos em um resumo final. Ideal para transcrições com mais de 500k palavras. (GPT-4-Turbo)',  # noqa: E501
-                "Gera o resumo iterativamente refinando o resumo a cada trecho da ligação, é um pouco mais barato que o modo Map-Reduce. Ideal para transcrições com mais de 500k palavras. (GPT-4-Turbo)",  # noqa: E501
+                "Insere a transcrição inteira no contexto do modelo de linguagem (LLM) em uma única chamada.",  # noqa: E501
+                'Primeiro resume os trechos da transcrição separadamente e depois "combina" todos os resumos em um resumo final.',  # noqa: E501
+                "Gera o resumo iterativamente refinando o resumo a cada trecho da ligação.",  # noqa: E501
             ],
             label_visibility="collapsed",
         )
